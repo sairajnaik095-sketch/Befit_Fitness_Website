@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BeFit | Full Body Workout</title>
+
+  <link rel="stylesheet" href="../Bootstrap/bootstrap.min.css">
+  <script src="../Bootstrap/bootstrap.bundel.min.js"></script>
+  <link rel="stylesheet" href="./Style.css">
+ 
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <style>
+    body {
+      background: #f5f5f5;
+      font-family: 'Poppins', sans-serif;
+    }
+    .workout-title {
+      text-align: center;
+      font-weight: 700;
+      font-size: 2.5rem;
+      margin-top: 40px;
+      background: linear-gradient(to right, #000000, #8B0000);
+      /* -webkit-background-clip: text; */
+      color: transparent;
+      text-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+    }
+    .workout-card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+    .workout-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 25px rgba(139,0,0,0.3);
+    }
+    .workout-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .workout-card h5 {
+      padding: 15px;
+      font-weight: 600;
+      text-align: center;
+      color: #8B0000;
+    }
+    .modal-content {
+      border-radius: 15px;
+      overflow: hidden;
+    }
+    .modal-header {
+      background: linear-gradient(135deg, #000000, #8B0000);
+      color: #fff;
+      border: none;
+    }
+    .modal-body h5 {
+      color: #8B0000;
+      font-weight: bold;
+    }
+    .btn-done {
+      background: #8B0000;
+      color: white;
+      font-weight: 600;
+      border-radius: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="Navbar_Header sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(to right, #000000, #8B0000);">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="./Home.html">BeFit</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="./Home.html">HOME</a></li>
+            <li class="nav-item"><a class="nav-link active" href="#">FULL BODY WORKOUT</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <h1 class="workout-title" data-aos="fade-down">FULL BODY WORKOUT</h1>
+
+  <div class="container py-5">
+    <div class="row g-4 justify-content-center">
+
+      <!-- 1 -->
+      <div class="col-md-4" data-aos="fade-right">
+        <div class="workout-card" data-bs-toggle="modal" data-bs-target="#farmerModal">
+          <img src="./Images/farmerc.webp" alt="Farmer's Carry">
+          <h5>Farmer’s Carry · Dumbbell</h5>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="col-md-4" data-aos="fade-left">
+        <div class="workout-card" data-bs-toggle="modal" data-bs-target="#deadliftModal">
+          <img src="./Images/barbella.webp" alt="Deadlift">
+          <h5>Deadlift · Barbell</h5>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="col-md-4" data-aos="fade-right">
+        <div class="workout-card" data-bs-toggle="modal" data-bs-target="#benchModal">
+          <img src="./Images/benachpressb.webp" alt="Bench Press">
+          <h5>Bench Press · Barbell</h5>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="col-md-4" data-aos="fade-left">
+        <div class="workout-card" data-bs-toggle="modal" data-bs-target="#squatModal">
+          <img src="./Images/sqautb.webp" alt="Squat">
+          <h5>Squat · Barbell</h5>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="col-md-4" data-aos="fade-right">
+        <div class="workout-card" data-bs-toggle="modal" data-bs-target="#pressModal">
+          <img src="./Images/overhead.webp" alt="Overhead Press">
+          <h5>Overhead Press · Dumbbell</h5>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="col-md-4" data-aos="fade-left">
+        <div class="workout-card" data-bs-toggle="modal" data-bs-target="#pullupModal">
+          <img src="./Images/pullup.webp" alt="Pull-Up">
+          <h5>Pull-Up · Bodyweight</h5>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="col-md-4" data-aos="fade-right">
+        <div class="workout-card" data-bs-toggle="modal" data-bs-target="#abModal">
+          <img src="./Images/roll.webp" alt="Ab Wheel">
+          <h5>Ab Wheel Rollout · Core</h5>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========== MODALS (1–7) ========== -->
+
+  <!-- Farmer’s Carry -->
+  <div class="modal fade" id="farmerModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Farmer’s Carry · Dumbbell</h4>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ratio ratio-16x9 mb-3">
+             <video id="farmerVideo" src="./vedeo/WhatsApp Video 2025-10-12 at 4.28.12 PM.mp4" controls autoplay loop muted></video>
+
+          </div>
+          <h5>Focus Area</h5><p>Forearms, Grip, Core</p>
+          <h5>Execution</h5><p>Walk with heavy dumbbells, posture tall, core engaged.</p>
+          <div class="text-center"><button class="btn btn-done" data-bs-dismiss="modal">DONE</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Deadlift -->
+  <div class="modal fade" id="deadliftModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Deadlift · Barbell</h4>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ratio ratio-16x9 mb-3">
+             <video id="farmerVideo" src="./vedeo/daed_lift_fullbody.mp4" controls autoplay loop muted></video>
+          </div>
+          <h5>Focus Area</h5><p>Back, Glutes, Hamstrings</p>
+          <h5>Execution</h5><p>Lift barbell from ground with flat back, drive hips forward.</p>
+          <div class="text-center"><button class="btn btn-done" data-bs-dismiss="modal">DONE</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bench Press -->
+  <div class="modal fade" id="benchModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Bench Press · Barbell</h4>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ratio ratio-16x9 mb-3">
+            <video id="farmerVideo" src="./vedeo/benchpressb.mp4" controls autoplay loop muted></video>
+          </div>
+          <h5>Focus Area</h5><p>Chest, Shoulders, Triceps</p>
+          <h5>Execution</h5><p>Lower bar to chest, press up fully without locking elbows.</p>
+          <div class="text-center"><button class="btn btn-done" data-bs-dismiss="modal">DONE</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Squat -->
+  <div class="modal fade" id="squatModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Squat · Barbell</h4>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ratio ratio-16x9 mb-3">
+            <!-- <iframe src="https://www.youtube.com/embed/aclHkVaku9U"></iframe> -->
+             <video id="farmerVideo" src="./vedeo/squatbar.mp4" controls autoplay loop muted></video>
+          </div>
+          <h5>Focus Area</h5><p>Quads, Glutes, Core</p>
+          <h5>Execution</h5><p>Keep back straight, descend until thighs parallel, push up through heels.</p>
+          <div class="text-center"><button class="btn btn-done" data-bs-dismiss="modal">DONE</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Overhead Press -->
+  <div class="modal fade" id="pressModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Overhead Press · Dumbbell</h4>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ratio ratio-16x9 mb-3">
+            <!-- <iframe src="https://www.youtube.com/embed/B-aVuyhvLHU"></iframe> -->
+             <video id="farmerVideo" src="./vedeo/overhead_fullbody.mp4" controls autoplay loop muted></video>
+          </div>
+          <h5>Focus Area</h5><p>Shoulders, Triceps, Core</p>
+          <h5>Execution</h5><p>Press dumbbells overhead, avoid arching your back.</p>
+          <div class="text-center"><button class="btn btn-done" data-bs-dismiss="modal">DONE</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pull-Up -->
+  <div class="modal fade" id="pullupModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Pull-Up · Bodyweight</h4>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ratio ratio-16x9 mb-3">
+             <video id="farmerVideo" src="./vedeo/pull_up_fullbody.mp4" controls autoplay loop muted></video>
+          </div>
+          <h5>Focus Area</h5><p>Back, Biceps, Core</p>
+          <h5>Execution</h5><p>Pull chest to bar, control descent. No swinging.</p>
+          <div class="text-center"><button class="btn btn-done" data-bs-dismiss="modal">DONE</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ab Wheel -->
+  <div class="modal fade" id="abModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Ab Wheel Rollout · Core</h4>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ratio ratio-16x9 mb-3">
+              <video id="farmerVideo" src="./vedeo/roll_out_fullybody.mp4" controls autoplay loop muted></video>
+          </div>
+          <h5>Focus Area</h5><p>Abs, Core Stability</p>
+          <h5>Execution</h5><p>Roll forward slowly, core tight, return without collapsing hips.</p>
+          <div class="text-center"><button class="btn btn-done" data-bs-dismiss="modal">DONE</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="diet-section py-5" data-aos="fade-up">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4" style="color:#8B0000;">Importance of Diet </h2>
+      <p class="mx-auto" style="max-width: 800px; font-size: 1.1rem; color: #333;">
+        Building muscle and gaining healthy weight isn’t just about lifting heavier — it’s about fueling your body right.
+        A calorie surplus rich in proteins, healthy fats, and complex carbohydrates helps your muscles recover and grow stronger.
+        Balanced nutrition ensures your workouts actually transform into visible gains, not just sweat and effort.
+      </p>
+
+      <div class="mt-4">
+        <button class="btn btn-lg" 
+                style="background: linear-gradient(to right, #000000, #8B0000); color: white; border-radius: 30px; font-weight: 600;"
+                onclick="window.location.href='./diet.html'">
+          Explore Weight Gain Diet Plan →
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-center py-3" style="background: #8b0000; color: white">
+    <p class="m-0">© 2025 BeFit | All Rights Reserved</p>
+  </footer>
+
+ <style>
+    .diet-section {
+  background: linear-gradient(180deg, #fff, #fbeaea);
+  border-top: 3px solid #8B0000;
+  border-radius: 15px 15px 0 0;
+}
+
+ </style>
+
+  <script>AOS.init({ duration: 1000 });</script>
+
+</body>
+</html>

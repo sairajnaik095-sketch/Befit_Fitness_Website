@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BeFit BMI Calculator</title>
+  <link rel="stylesheet" href="../Bootstrap/bootstrap.min.css">
+  <script src="../Bootstrap/bootstrap.bundel.min.js"></script>
+  <link rel="stylesheet" href="./Style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="./bmi.js"></script>
+
+  <style>
+    body {
+      background: linear-gradient(to right, #000000, #8B0000);
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .calculator-container {
+      max-width: 500px;
+      margin: 100px auto;
+      background: #111;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
+    }
+
+    h1 {
+      text-align: center;
+      color: #FFD700;
+      text-shadow: 0 0 15px rgba(255,215,0,0.4);
+      margin-bottom: 30px;
+    }
+
+    .form-control {
+      background: #222;
+      color: #fff;
+      border: 1px solid #555;
+      border-radius: 10px;
+    }
+
+    .btn-calc {
+      background: #FFD700;
+      color: #000;
+      font-weight: bold;
+      border-radius: 25px;
+      width: 100%;
+      margin-top: 15px;
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+    }
+
+    .result {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #FFD700;
+      text-shadow: 0 0 10px rgba(255,215,0,0.5);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <section class="Navbar_Header sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(to right, #000000, #8B0000);">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="./Home.html">BeFit</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a href="./Home.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="./about.html" class="nav-link">About Us</a></li>
+            <li class="nav-item"><a href="./login.html" class="nav-link">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- BMI Calculator -->
+  <div class="calculator-container" data-aos="fade-up">
+    <h1>BMI Calculator</h1>
+    <div class="mb-3">
+      <label for="weight" class="form-label">Weight (kg)</label>
+      <input type="number" class="form-control" id="weight" placeholder="Enter your weight">
+    </div>
+    <div class="mb-3">
+      <label for="height" class="form-label">Height (cm)</label>
+      <input type="number" class="form-control" id="height" placeholder="Enter your height">
+    </div>
+    <button class="btn btn-calc" onclick="calculateBMI()">Calculate BMI</button>
+    <div class="result" id="bmiResult"></div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer bg-dark text-white py-4 mt-5">
+    <div class="container text-center">
+      <p>&copy; 2025 BeFit Fitness Club. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="./bmi.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({duration:1000, once:false});
+  </script>
+</body>
+</html>

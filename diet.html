@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BeFit | Diet Plans</title>
+
+  <link rel="stylesheet" href="../Bootstrap/bootstrap.min.css">
+  <script src="../Bootstrap/bootstrap.bundel.min.js"></script>
+  <link rel="stylesheet" href="./Style.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- AOS for scroll animations -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+</head>
+
+<body style="background: linear-gradient(to bottom right, #000000, #8B0000); color: #fff;">
+
+  <!-- ===== Navbar ===== -->
+  <section class="Navbar_Header sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(to right, #000000, #8B0000);">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">
+          <img src="./Images/befitlogo.png" alt="logo" height="70px" width="70px">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a href="./Home.html" class="nav-link">HOME</a></li>
+            <li class="nav-item"><a href="./about.html" class="nav-link">ABOUT</a></li>
+            <li class="nav-item"><a href="./bmi.html" class="nav-link">BMI</a></li>
+            <li class="nav-item"><a href="./diet.html" class="nav-link active">DIET PLANS</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- ===== Diet Plans Section ===== -->
+  <section class="diet-section py-5">
+    <div class="container">
+      <h1 class="text-center fw-bold mb-5 heading-glow">CHOOSE YOUR DIET PLAN</h1>
+
+      <div class="row g-4 justify-content-center">
+
+        <!-- Weight Loss -->
+        <div class="col-md-4" data-aos="fade-up">
+          <div class="course-card text-center p-3">
+            <img src="./Images/wloss.webp" alt="Weight Loss" class="course-img mb-3">
+            <h5>Weight Loss Plan</h5>
+            <p>Burn fat, eat smart, and stay lean with our balanced weight loss diet.</p>
+            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#dietModal1">View Plan</button>
+          </div>
+        </div>
+
+        <!-- Weight Gain -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="course-card text-center p-3">
+            <img src="./Images/wgain.avif" alt="Weight Gain" class="course-img mb-3">
+            <h5>Weight Gain Plan</h5>
+            <p>High-protein meals designed to help you build lean mass effectively.</p>
+            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#dietModal2">View Plan</button>
+          </div>
+        </div>
+
+        <!-- Keto Diet -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="course-card text-center p-3">
+            <img src="./Images/keto.webp" alt="Keto" class="course-img mb-3">
+            <h5>Keto Diet Plan</h5>
+            <p>Fuel your body with fats, cut carbs, and embrace ketosis for fat burn.</p>
+            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#dietModal3">View Plan</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== Modals for Diet Plans ====== -->
+
+  <!-- Weight Loss Modal -->
+  <div class="modal fade" id="dietModal1" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content text-light" style="background: linear-gradient(135deg, #000000, #8B0000); border-radius: 20px;">
+        <div class="modal-header border-0">
+          <h4 class="modal-title fw-bold text-warning">Weight Loss Plan</h4>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <ul>
+            <li><b>Breakfast:</b> Oats with fruits + green tea</li>
+            <li><b>Lunch:</b> Grilled chicken or tofu + brown rice + salad</li>
+            <li><b>Snacks:</b> Dry fruits or protein bar</li>
+            <li><b>Dinner:</b> Soup + vegetables + boiled egg</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Weight Gain Modal -->
+  <div class="modal fade" id="dietModal2" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content text-light" style="background: linear-gradient(135deg, #000000, #8B0000); border-radius: 20px;">
+        <div class="modal-header border-0">
+          <h4 class="modal-title fw-bold text-warning">Weight Gain Plan</h4>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <ul>
+            <li><b>Breakfast:</b> Peanut butter toast + milk + banana</li>
+            <li><b>Lunch:</b> Paneer or chicken curry + white rice + ghee</li>
+            <li><b>Snacks:</b> Nuts, shakes, or boiled eggs</li>
+            <li><b>Dinner:</b> Roti + dal + rice + yogurt</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Keto Modal -->
+  <div class="modal fade" id="dietModal3" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content text-light" style="background: linear-gradient(135deg, #000000, #8B0000); border-radius: 20px;">
+        <div class="modal-header border-0">
+          <h4 class="modal-title fw-bold text-warning">Keto Diet Plan</h4>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <ul>
+            <li><b>Breakfast:</b> Scrambled eggs with avocado</li>
+            <li><b>Lunch:</b> Grilled fish + sautéed vegetables</li>
+            <li><b>Snacks:</b> Cheese cubes or almonds</li>
+            <li><b>Dinner:</b> Chicken salad with olive oil</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer bg-dark text-white text-center py-4 mt-5">
+    <p>&copy; 2025 BeFit Fitness Club | All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    AOS.init({ duration: 1000, once: false });
+  </script>
+</body>
+</html>

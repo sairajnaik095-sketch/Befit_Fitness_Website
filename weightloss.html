@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BeFit | Weight Loss Workout</title>
+
+  <link rel="stylesheet" href="../Bootstrap/bootstrap.min.css" />
+  <script src="../Bootstrap/bootstrap.bundel.min.js"></script>
+  <link rel="stylesheet" href="./Style.css" />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <link
+    href="https://unpkg.com/aos@2.3.4/dist/aos.css"
+    rel="stylesheet"
+  />
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <style>
+    body {
+      background: #f5f5f5;
+      font-family: "Poppins", sans-serif;
+    }
+
+    .workout-title {
+      text-align: center;
+      font-weight: 700;
+      font-size: 2.5rem;
+      margin-top: 40px;
+      background: linear-gradient(to right, #8b0000, #000000);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+    }
+
+    .workout-card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+    .workout-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 25px rgba(139, 0, 0, 0.3);
+    }
+
+    .workout-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .workout-card h5 {
+      padding: 15px;
+      font-weight: 600;
+      text-align: center;
+      color: #8b0000;
+    }
+
+    .modal-content {
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+    .modal-header {
+      background: linear-gradient(135deg, #8b0000, #000000);
+      color: #fff;
+      border: none;
+    }
+
+    .btn-done {
+      background: #8b0000;
+      color: white;
+      font-weight: 600;
+      border-radius: 30px;
+    }
+
+    .diet-section {
+      background: linear-gradient(180deg, #fff, #fdeaea);
+      border-top: 3px solid #8b0000;
+      border-radius: 15px 15px 0 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <section class="Navbar_Header sticky-top">
+    <nav
+      class="navbar navbar-expand-lg navbar-dark"
+      style="background: linear-gradient(to right, #8b0000, #000000)"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="./Home.html">BeFit</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="./Home.html">HOME</a></li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">WEIGHT LOSS WORKOUT</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Title -->
+  <h1 class="workout-title" data-aos="fade-down">WEIGHT LOSS WORKOUT</h1>
+
+  <div class="container py-5">
+    <div class="row g-4 justify-content-center">
+      <!-- 10 cards -->
+      <div class="col-md-4" data-aos="fade-right">
+        <div
+          class="workout-card"
+          data-bs-toggle="modal"
+          data-bs-target="#jumpingjackModal"
+        >
+          <img src="./Images/jump.webp" alt="Jumping Jacks" />
+          <h5>Jumping Jacks · Cardio</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-left">
+        <div
+          class="workout-card"
+          data-bs-toggle="modal"
+          data-bs-target="#burpeeModal"
+        >
+          <img src="./Images/burpees.webp" alt="Burpees" />
+          <h5>Burpees · Full Body</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-right">
+        <div
+          class="workout-card"
+          data-bs-toggle="modal"
+          data-bs-target="#mountainModal"
+        >
+          <img src="./Images/mountain.webp" alt="Mountain Climber" />
+          <h5>Mountain Climbers · Core</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-left">
+        <div
+          class="workout-card"
+          data-bs-toggle="modal"
+          data-bs-target="#jumpSquatModal"
+        >
+          <img src="./Images/jumpsqut.webp" alt="Jump Squat" />
+          <h5>Jump Squat · Legs</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-right">
+        <div
+          class="workout-card"
+          data-bs-toggle="modal"
+          data-bs-target="#pushupModal"
+        >
+          <img src="./Images/pushup.webp" alt="Push-ups" />
+          <h5>Push-ups · Upper Body</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-left">
+        <div
+          class="workout-card"
+          data-bs-toggle="modal"
+          data-bs-target="#plankModal"
+        >
+          <img src="./Images/plank.webp" alt="Plank" />
+          <h5>Plank · Core</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-right">
+        <div
+          class="workout-card"
+          data-bs-toggle="modal"
+          data-bs-target="#highkneesModal"
+        >
+          <img src="./Images/highknees.webp" alt="High Knees" />
+          <h5>High Knees · Cardio</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-left">
+        <div
+          class="workout-card"
+          data-bs-toggle="modal"
+          data-bs-target="#sideplankModal"
+        >
+          <img src="./Images/side-plank.webp" alt="Side Plank" />
+          <h5>Side Plank · Core</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-right">
+        <div
+          class="workout-card"
+          data-bs-toggle="modal"
+          data-bs-target="#bicycleModal"
+        >
+          <img src="./Images/bicycle.webp" alt="Bicycle Crunches" />
+          <h5>Bicycle Crunches · Abs</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-left">
+        <div
+          class="workout-card"
+          data-bs-toggle="modal"
+          data-bs-target="#skippingModal"
+        >
+          <img src="./Images/skiping.webp" alt="Skipping Rope" />
+          <h5>Skipping Rope · Cardio</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 10 MODALS -->
+  <div id="modalContainer">
+    <!-- Each modal has unique id, video, and text -->
+    <!-- Jumping Jacks -->
+    <div class="modal fade" id="jumpingjackModal" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Jumping Jacks · Cardio</h4>
+            <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <video src="./vedeo/jamping1.mp4" controls autoplay loop muted class="w-100 rounded"></video>
+            
+            <p class="mt-3">Jump feet wide and swing your arms overhead; return to start rhythmically. Perfect warm-up to ignite your heart rate.</p>
+            <div class="text-center">
+              <button class="btn btn-done" data-bs-dismiss="modal">DONE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Burpees -->
+    <div class="modal fade" id="burpeeModal" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Burpees · Full Body</h4>
+            <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <video src="./vedeo/barpess1.mp4" controls autoplay loop muted class="w-100 rounded"></video>
+            <p class="mt-3">Drop to a plank, jump back up, and leap. Each rep trains your endurance and torches calories fast.</p>
+            <div class="text-center">
+              <button class="btn btn-done" data-bs-dismiss="modal">DONE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mountain Climbers -->
+    <div class="modal fade" id="mountainModal" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Mountain Climbers · Core</h4>
+            <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <video src="./vedeo/mountain.mp4" controls autoplay loop muted class="w-100 rounded"></video>
+             
+            <p class="mt-3">Alternate your knees toward your chest in plank position — pure burn for your core and cardio system.</p>
+            <div class="text-center">
+              <button class="btn btn-done" data-bs-dismiss="modal">DONE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Jump Squat -->
+    <div class="modal fade" id="jumpSquatModal" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Jump Squat · Legs</h4>
+            <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <video src="./vedeo/jumpsuat.mp4" controls autoplay loop muted class="w-100 rounded"></video>
+            <p class="mt-3">Squat low and explode upward. Builds explosive power and helps in fat loss through intense muscle engagement.</p>
+            <div class="text-center">
+              <button class="btn btn-done" data-bs-dismiss="modal">DONE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Push-ups -->
+    <div class="modal fade" id="pushupModal" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Push-ups · Upper Body</h4>
+            <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <video src="./vedeo/pushup.mp4" controls autoplay loop muted class="w-100 rounded"></video>
+            <p class="mt-3">Strengthen chest, shoulders, and arms. Boosts upper-body endurance and helps sculpt lean muscle.</p>
+            <div class="text-center">
+              <button class="btn btn-done" data-bs-dismiss="modal">DONE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Plank -->
+    <div class="modal fade" id="plankModal" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Plank · Core</h4>
+            <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <video src="./vedeo/plank_weightgain.mp4" controls autoplay loop muted class="w-100 rounded"></video>
+            <p class="mt-3">Hold your body straight like a board. Enhances stability and tightens the core muscles.</p>
+            <div class="text-center">
+              <button class="btn btn-done" data-bs-dismiss="modal">DONE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- High Knees -->
+    <div class="modal fade" id="highkneesModal" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">High Knees · Cardio</h4>
+            <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <video src="https://lyftaweb.s3.us-east-2.amazonaws.com/GymvisualMP4/30911201.mp4" controls autoplay loop muted class="w-100 rounded"></video>
+            
+            <p class="mt-3">Run in place, driving knees high. A cardio blaster that wakes every muscle up.</p>
+            <div class="text-center">
+              <button class="btn btn-done" data-bs-dismiss="modal">DONE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Side Plank -->
+    <div class="modal fade" id="sideplankModal" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Side Plank · Core</h4>
+            <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+           <video src="./vedeo/side_plank_weightloss.mp4" controls autoplay loop muted class="w-100 rounded"></video>
+            <p class="mt-3">Balance on one forearm, stack your feet, and hold. Strengthens obliques and builds side stability.</p>
+            <div class="text-center">
+              <button class="btn btn-done" data-bs-dismiss="modal">DONE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bicycle Crunches -->
+    <div class="modal fade" id="bicycleModal" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Bicycle Crunches · Abs</h4>
+            <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <video src="./vedeo/bycycle.mp4" controls autoplay loop muted class="w-100 rounded"></video>
+            <p class="mt-3">Alternate elbow-to-knee motions for sharp ab definition and cardio synergy.</p>
+            <div class="text-center">
+              <button class="btn btn-done" data-bs-dismiss="modal">DONE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Skipping -->
+    <div class="modal fade" id="skippingModal" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Skipping Rope · Cardio</h4>
+            <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <video src="./vedeo/skipingrope_weight_loss.mp4" controls autoplay loop muted class="w-100 rounded"></video>
+            <p class="mt-3">Simple yet deadly effective. Jumping rope burns fat fast and elevates stamina like nothing else.</p>
+            <div class="text-center">
+              <button class="btn btn-done" data-bs-dismiss="modal">DONE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DIET SECTION -->
+  <section class="diet-section py-5" data-aos="fade-up">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4" style="color: #8b0000">Importance of Diet in Weight Loss</h2>
+      <p
+        class="mx-auto"
+        style="max-width: 800px; font-size: 1.1rem; color: #333"
+      >
+        Weight loss         A balanced diet fuels your workouts and speeds up fat loss. 
+        Combine cardio with clean eating — high protein, low sugar, 
+        and enough hydration. Remember, you can’t out-train a bad diet.
+      </p>
+
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <div class="p-3 shadow-sm rounded" style="background: #fff">
+            <h5 class="text-danger fw-bold">🍳 Breakfast</h5>
+            <p>Oatmeal with fruits or eggs + brown bread toast</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="p-3 shadow-sm rounded" style="background: #fff">
+            <h5 class="text-danger fw-bold">🥗 Lunch</h5>
+            <p>Grilled chicken/fish with vegetables or sprouts salad</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="p-3 shadow-sm rounded" style="background: #fff">
+            <h5 class="text-danger fw-bold">🍎 Dinner</h5>
+            <p>Light soup, paneer, or tofu with sautéed veggies</p>
+          </div>
+        </div>
+        <div class="mt-4">
+        <button class="btn btn-lg" 
+                style="background: linear-gradient(to right, #000000, #8B0000); color: white; border-radius: 30px; font-weight: 600;"
+                onclick="window.location.href='./diet.html'">
+          Explore Weight Gain Diet Plan →
+        </button>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-center py-3" style="background: #8b0000; color: white">
+    <p class="m-0">© 2025 BeFit | All Rights Reserved</p>
+  </footer>
+
+  <!-- AOS INIT -->
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BeFit Blogs</title>
+  <link rel="stylesheet" href="../Bootstrap/bootstrap.min.css">
+  <script src="../Bootstrap/bootstrap.bundel.min.js"></script>
+  <link rel="stylesheet" href="./Style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <style>
+    body {
+      background: linear-gradient(to right, #000000, #8B0000);
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+    }
+
+    .blog-section {
+      padding: 80px 0;
+    }
+
+    .blog-card {
+      background-color: #111;
+      border-radius: 15px;
+      overflow: hidden;
+      transition: all 0.4s ease;
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.15);
+    }
+
+    .blog-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
+    }
+
+    .blog-img {
+      height: 250px;
+      width: 100%;
+      object-fit: cover;
+      filter: brightness(85%);
+    }
+
+    .blog-content {
+      padding: 20px;
+    }
+
+    .blog-content h4 {
+      color: #FFD700;
+      font-weight: bold;
+    }
+
+    .blog-content p {
+      color: #ccc;
+      font-size: 0.95rem;
+    }
+
+    .read-btn {
+      border: 2px solid #FFD700;
+      color: #FFD700;
+      border-radius: 25px;
+      padding: 8px 20px;
+      font-weight: 600;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+
+    .read-btn:hover {
+      background: #FFD700;
+      color: #000;
+    }
+
+    .heading-glow {
+      color: #FFD700;
+      text-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+      letter-spacing: 1px;
+      margin-bottom: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <section class="Navbar_Header sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(to right, #000000, #8B0000);">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="./Home.html">BeFit</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a href="./Home.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="./about.html" class="nav-link">About Us</a></li>
+            <li class="nav-item"><a href="./login.html" class="nav-link">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Blog Section -->
+  <section class="blog-section">
+    <div class="container">
+      <h1 class="text-center heading-glow">FITNESS & WELLNESS BLOGS</h1>
+      <div class="row g-4">
+
+        <!-- Blog 1 -->
+        <div class="col-md-4" data-aos="fade-up">
+          <div class="blog-card">
+            <img src="./Images/yoga.webp" alt="Yoga" class="blog-img">
+            <div class="blog-content">
+              <h4>5 Yoga Asanas for Mind and Flexibility</h4>
+              <p>Explore the best yoga poses to enhance flexibility, calm your mind, and balance your energy every morning.</p>
+              <a href="https://www.artofliving.org/in-en/yoga/yoga-poses" target="_blank" class="read-btn">Read More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog 2 -->
+        <div class="col-md-4" data-aos="fade-up">
+          <div class="blog-card">
+            <img src="./Images/cardioimg.webp" alt="Cardio" class="blog-img">
+            <div class="blog-content">
+              <h4>Cardio vs Strength: Which is Better for You?</h4>
+              <p>Understand the key differences and benefits of both workouts to balance endurance and muscle growth.</p>
+              <a href="https://www.healthline.com/health/fitness/cardio-vs-strength-training" target="_blank" class="read-btn">Read More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog 3 -->
+        <div class="col-md-4" data-aos="fade-up">
+          <div class="blog-card">
+            <img src="./Images/dietcaro1.avif" alt="Diet" class="blog-img">
+            <div class="blog-content">
+              <h4>Diet Planning 101: Eat Smart, Stay Fit</h4>
+              <p>Learn how to craft a balanced diet that fuels your energy, boosts metabolism, and sustains long-term results.</p>
+              <a href="https://www.medicalnewstoday.com/articles/healthy-eating-tips" target="_blank" class="read-btn">Read More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog 4 -->
+        <div class="col-md-4" data-aos="fade-up">
+          <div class="blog-card">
+            <img src="./Images/wgain.avif" alt="Weight Gain" class="blog-img">
+            <div class="blog-content">
+              <h4>Smart Weight Gain Strategies</h4>
+              <p>Discover science-backed techniques to gain healthy weight without fat overload — build strength and size naturally.</p>
+              <a href="https://www.medicalnewstoday.com/articles/how-to-gain-weight" target="_blank" class="read-btn">Read More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog 5 -->
+        <div class="col-md-4" data-aos="fade-up">
+          <div class="blog-card">
+            <img src="./Images/wloss.webp" alt="Weight Loss" class="blog-img">
+            <div class="blog-content">
+              <h4>Top 10 Weight Loss Myths Busted</h4>
+              <p>Don't fall for the fads — understand what really works when it comes to losing fat efficiently and safely.</p>
+              <a href="https://www.webmd.com/diet/obesity/features/10-weight-loss-myths" target="_blank" class="read-btn">Read More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog 6 -->
+        <div class="col-md-4" data-aos="fade-up">
+          <div class="blog-card">
+            <img src="./Images/mindmu.webp" alt="Mind Health" class="blog-img">
+            <div class="blog-content">
+              <h4>The Mind-Muscle Connection</h4>
+              <p>Learn how mindfulness and focus can amplify your workouts and lead to faster results both mentally and physically.</p>
+              <a href="https://uk.gymshark.com/blog/article/build-a-strong-mind-muscle-connection" target="_blank" class="read-btn">Read More</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-dark text-white py-4">
+    <div class="container text-center">
+      <p>&copy; 2025 BeFit Fitness Club. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: false
+    });
+  </script>
+</body>
+</html>

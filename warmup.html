@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BeFit | Warm-Up</title>
+
+  <link rel="stylesheet" href="../Bootstrap/bootstrap.min.css">
+  <script src="../Bootstrap/bootstrap.bundel.min.js"></script>
+  <link rel="stylesheet" href="./Style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <style>
+    body {
+       /* background: #f5f5f5; */
+     background: url(./Images/befitlogoback.png) no-repeat center center fixed;
+  background-size: cover;
+
+
+
+      font-family: 'Poppins', sans-serif;
+    }
+    .workout-title {
+      text-align: center;
+      font-weight: 700;
+      font-size: 2.5rem;
+      margin-top: 40px;
+      background: linear-gradient(to right, #000000, #8B0000);
+       -webkit-background-clip: text;
+      color:gold;
+      text-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+    }
+    .workout-card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+    .workout-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 25px rgba(139,0,0,0.3);
+    }
+    .workout-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .workout-card h5 {
+      padding: 15px;
+      font-weight: 600;
+      text-align: center;
+      color: #8B0000;
+    }
+    .modal-content {
+      border-radius: 15px;
+      overflow: hidden;
+    }
+    .modal-header {
+      background: linear-gradient(135deg, #000000, #8B0000);
+      color: #fff;
+      border: none;
+    }
+    .modal-body h5 {
+      color: #8B0000;
+      font-weight: bold;
+    }
+    .btn-done {
+      background: #8B0000;
+      color: white;
+      font-weight: 600;
+      border-radius: 30px;
+    }
+  </style>
+</head>
+<body>
+  <section class="Navbar_Header sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(to right, #000000, #8B0000);">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="./Home.html">BeFit</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="./Home.html">HOME</a></li>
+            <li class="nav-item"><a class="nav-link active" href="#">WARM-UP</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <h1 class="workout-title" data-aos="fade-down">WARM-UP EXERCISES</h1>
+
+  <div class="container py-5">
+    <div class="row g-4 justify-content-center">
+
+      <!-- 1. Jumping Jacks -->
+      <div class="col-md-4" data-aos="fade-right">
+        <div class="workout-card" data-bs-toggle="modal" data-bs-target="#warmup1Modal">
+          <img src="https://imgs.search.brave.com/C5tlHLVD-OPq1GZA-iu3ls1NALEbSu_lOzeZ3DsTnQM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bnV0cmltdXNjbGUu/Y29tL2Nkbi9zaG9w/L2FydGljbGVzL2M4/MTk2MDkwLTVmMDkt/NGViZS1iYTkxLWVm/MDQyODhjMjM2NF83/ZDkyNDkxYi1hNmI1/LTQxODctYmQ5Yy1i/ZThlODIxZDAzNzku/anBnP3Y9MTc1MzA4/NDY4NiZ3aWR0aD0x/MTAw" alt="Jumping Jacks">
+          <h5>Jumping Jacks · Cardio</h5>
+        </div>
+      </div>
+
+      <!-- 2. High Knees -->
+      <div class="col-md-4" data-aos="fade-left">
+        <div class="workout-card" data-bs-toggle="modal" data-bs-target="#warmup2Modal">
+          <img src="https://imgs.search.brave.com/MgB0p82VN6jr3QekFsVBYfBBcJKTK6S1YoqVSHeFP28/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMjE1/ODA1NzIxOS9mci9w/aG90by93b21hbi1p/bi1ibGFjay1zcG9y/dHN3ZWFyLXBlcmZv/cm1pbmctaGlnaC1r/bmVlLWV4ZXJjaXNl/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz16UEtPM1d0QVNs/VlVfcXVLRjlZVkRK/Qkd2bXhtWDFwLUVM/ODNKRllHTXA4PQ" alt="High Knees">
+          <h5>High Knees · Cardio</h5>
+        </div>
+      </div>
+
+      <!-- 3. Arm Circles -->
+      <div class="col-md-4" data-aos="fade-right">
+        <div class="workout-card" data-bs-toggle="modal" data-bs-target="#warmup3Modal">
+          <img src="https://imgs.search.brave.com/ZHZnbOqx8umtKheo1N3bUFKVxtM_X19edHOUI7HF73A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/amVmaXQuY29tL2Fz/c2V0cy9pbWcvZXhl/cmNpc2VzL2dpZnMv/ODY3LmdpZg.gif" alt="Arm Circles">
+          <h5>Arm Circles · Shoulders</h5>
+        </div>
+      </div>
+
+      <!-- 4. Leg Swings -->
+      <div class="col-md-4" data-aos="fade-left">
+        <div class="workout-card" data-bs-toggle="modal" data-bs-target="#warmup4Modal">
+          <img src="https://imgs.search.brave.com/scoPkPwx4if8oJwp2G9fdG_75Lv-dB56WU9cwFZmnZ4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/Ym9kYm90LmNvbS9J/bWFnZXMvZXhlcmNp/c2VzL2hpLXJlcy9y/ZWFsbmFtZS9zaWRl/LWxlZy1zd2luZ3Mu/anBn" alt="Leg Swings">
+          <h5>Leg Swings · Hips</h5>
+        </div>
+      </div>
+
+      <!-- 5. Lunges -->
+      <div class="col-md-4" data-aos="fade-right">
+        <div class="workout-card" data-bs-toggle="modal" data-bs-target="#warmup5Modal">
+          <img src="https://imgs.search.brave.com/bnPbFVgfmuP9xAlCNtzD7Nuw7YEfJ8rwe_nFN7gAKw8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTE2/MDMyODgwOS9waG90/by9maXRuZXNzLXdv/bWFuLWRvaW5nLWx1/bmdlcy1sZWctd29y/a291dC1leGVyY2lz/ZXMuanBnP3M9NjEy/eDYxMiZ3PTAmaz0y/MCZjPWM1Vm9mMVYx/U3pUWWhScHhQSkNu/NWVmMU5sMEFMZzFO/Y3NQNXpQa3N0VDA9" alt="Lunges">
+          <h5>Lunges · Legs</h5>
+        </div>
+      </div>
+
+      <!-- 6. Torso Twists -->
+      <div class="col-md-4" data-aos="fade-left">
+        <div class="workout-card" data-bs-toggle="modal" data-bs-target="#warmup6Modal">
+          <img src="https://imgs.search.brave.com/pGRhwQ8ZaNG2T9pwvOpNwDn6UGuNyZkS_b3T3iaF0Dk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZXRpbWcuY29tL3Ro/dW1iL21zaWQtMTAz/ODY4Mzk5LHdpZHRo/LTY0MCxoZWlnaHQt/NDgwLHJlc2l6ZW1v/ZGUtNzUsaW1nc2l6/ZS0xNzA3NDU0L3Rv/cnNvLXR3aXN0cy5q/cGc" alt="Torso Twists">
+          <h5>Torso Twists · Core</h5>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========== MODALS ========== -->
+  <!-- 1. Jumping Jacks Modal -->
+  <div class="modal fade" id="warmup1Modal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Jumping Jacks · Cardio</h4>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ratio ratio-16x9 mb-3">
+            <video src="./vedeo/jamping-jack-warmup.mp4" controls autoplay loop muted></video>
+          </div>
+          <h5>Focus Area</h5><p>Full Body, Cardio</p>
+          <h5>Execution</h5><p>Jump with feet apart, arms overhead, back down to starting position.</p>
+          <div class="text-center"><button class="btn btn-done" data-bs-dismiss="modal">DONE</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. High Knees Modal -->
+  <div class="modal fade" id="warmup2Modal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">High Knees · Cardio</h4>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ratio ratio-16x9 mb-3">
+            <video src="./vedeo/high_kness_warmup.mp4" controls autoplay loop muted></video>
+          </div>
+          <h5>Focus Area</h5><p>Legs, Core</p>
+          <h5>Execution</h5><p>Run in place, driving knees up to waist height quickly.</p>
+          <div class="text-center"><button class="btn btn-done" data-bs-dismiss="modal">DONE</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Arm Circles Modal -->
+  <div class="modal fade" id="warmup3Modal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Arm Circles · Shoulders</h4>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ratio ratio-16x9 mb-3">
+            <video src="./vedeo/amr_circle_warmup.mp4" controls autoplay loop muted></video>
+          </div>
+          <h5>Focus Area</h5><p>Shoulders, Upper Body</p>
+          <h5>Execution</h5><p>Circle arms forward and backward in controlled motion.</p>
+          <div class="text-center"><button class="btn btn-done" data-bs-dismiss="modal">DONE</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Leg Swings Modal -->
+  <div class="modal fade" id="warmup4Modal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Leg Swings · Hips</h4>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ratio ratio-16x9 mb-3">
+            <video src="./vedeo/leg_swing_warmup.mp4" controls autoplay loop muted></video>
+          </div>
+          <h5>Focus Area</h5><p>Hips, Legs</p>
+          <h5>Execution</h5><p>Swing one leg forward and backward, keep torso stable.</p>
+          <div class="text-center"><button class="btn btn-done" data-bs-dismiss="modal">DONE</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. Lunges Modal -->
+  <div class="modal fade" id="warmup5Modal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Lunges · Legs</h4>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ratio ratio-16x9 mb-3">
+            <video src="./vedeo/lunges_warmup.mp4" controls autoplay loop muted></video>
+          </div>
+          <h5>Focus Area</h5><p>Legs, Glutes</p>
+          <h5>Execution</h5><p>Step forward, lower knee to 90°, push back to start.</p>
+          <div class="text-center"><button class="btn btn-done" data-bs-dismiss="modal">DONE</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. Torso Twists Modal -->
+  <div class="modal fade" id="warmup6Modal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Torso Twists · Core</h4>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ratio ratio-16x9 mb-3">
+            <video src="./vedeo/torso_warmup.mp4" controls autoplay loop muted></video>
+          </div>
+          <h5>Focus Area</h5><p>Core, Obliques</p>
+          <h5>Execution</h5><p>Rotate torso side to side, keep hips stable.</p>
+          <div class="text-center"><button class="btn btn-done" data-bs-dismiss="modal">DONE</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+function completeWorkout() {
+  let progress = JSON.parse(localStorage.getItem("workoutProgress")) || {
+    workoutsCompleted: 0,
+    caloriesBurned: 0,
+    streak: 0
+  };
+
+  progress.workoutsCompleted += 1;
+  progress.caloriesBurned += 100;
+  progress.streak += 1;
+
+  localStorage.setItem("workoutProgress", JSON.stringify(progress));
+
+  // redirect to dashboard
+  window.location.href = "dashboard.html";
+}
+</script>
+<br>
+<div class="text-center">
+<a href="./dashbord.html"><button onclick="completeWorkout()" class="btn btn-warning">✅ Mark as Completed</button></a>
+</div>
+
+
+  <section class="diet-section py-5" data-aos="fade-up">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4" style="color:#8B0000;">Importance of Diet</h2>
+      <p class="mx-auto" style="max-width: 800px; font-size: 1.1rem; color: #333;">
+        Building muscle and gaining healthy weight isn’t just about lifting heavier — it’s about fueling your body right.
+        A calorie surplus rich in proteins, healthy fats, and complex carbohydrates helps your muscles recover and grow stronger.
+        Balanced nutrition ensures your workouts actually transform into visible gains, not just sweat and effort.
+      </p>
+
+      <div class="mt-4">
+        <button class="btn btn-lg" 
+                style="background: linear-gradient(to right, #000000, #8B0000); color: white; border-radius: 30px; font-weight: 600;"
+                onclick="window.location.href='./diet.html'">
+          Explore Weight Gain Diet Plan →
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-center py-3" style="background: #8b0000; color: white">
+    <p class="m-0">© 2025 BeFit | All Rights Reserved</p>
+  </footer>
+
+ <style>
+    .diet-section {
+  background: linear-gradient(180deg, #fff, #fbeaea);
+  border-top: 3px solid #8B0000;
+  border-radius: 15px 15px 0 0;
+}
+
+ </style>
+
+  <script>AOS.init({ duration: 1000 });</script>
+</body>
+</html>

@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BeFit | Yoga Workout</title>
+
+  <link rel="stylesheet" href="../Bootstrap/bootstrap.min.css" />
+  <script src="../Bootstrap/bootstrap.bundel.min.js"></script>
+  <link rel="stylesheet" href="./Style.css" />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <link
+    href="https://unpkg.com/aos@2.3.4/dist/aos.css"
+    rel="stylesheet"
+  />
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <style>
+    body {
+      background: #f5f5f5;
+      font-family: "Poppins", sans-serif;
+    }
+
+    .workout-title {
+      text-align: center;
+      font-weight: 700;
+      font-size: 2.5rem;
+      margin-top: 40px;
+      background: linear-gradient(to right, #8b0000, #000000);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+    }
+
+    .workout-card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+    .workout-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 25px rgba(139, 0, 0, 0.3);
+    }
+
+    .workout-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .workout-card h5 {
+      padding: 15px;
+      font-weight: 600;
+      text-align: center;
+      color: #8b0000;
+    }
+
+    .modal-content {
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+    .modal-header {
+      background: linear-gradient(135deg, #8b0000, #000000);
+      color: #fff;
+      border: none;
+    }
+
+    .btn-done {
+      background: #8b0000;
+      color: white;
+      font-weight: 600;
+      border-radius: 30px;
+    }
+
+    .diet-section {
+      background: linear-gradient(180deg, #fff, #fdeaea);
+      border-top: 3px solid #8b0000;
+      border-radius: 15px 15px 0 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <section class="Navbar_Header sticky-top">
+    <nav
+      class="navbar navbar-expand-lg navbar-dark"
+      style="background: linear-gradient(to right, #8b0000, #000000)"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="./Home.html">BeFit</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="./Home.html">HOME</a></li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">YOGA WORKOUT</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Title -->
+  <h1 class="workout-title" data-aos="fade-down">YOGA WORKOUT</h1>
+
+  <div class="container py-5">
+    <div class="row g-4 justify-content-center">
+      <!-- 10 cards -->
+      <div class="col-md-4" data-aos="fade-right">
+        <div
+          class="workout-card"
+          data-bs-toggle="modal"
+          data-bs-target="#modal1"
+        >
+          <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Surya Namaskar" />
+          <h5>Surya Namaskar · Warmup</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-left">
+        <div
+          class="workout-card"
+          data-bs-toggle="modal"
+          data-bs-target="#modal2"
+        >
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Tadasana" />
+          <h5>Tadasana · Posture</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-right">
+        <div
+          class="workout-card"
+          data-bs-toggle="modal"
+          data-bs-target="#modal3"
+        >
+          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Trikonasana" />
+          <h5>Trikonasana · Balance</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-left">
+        <div
+          class="workout-card"
+          data-bs-toggle="modal"
+          data-bs-target="#modal4"
+        >
+          <img src="./Images/bhijasan.webp" alt="Bhujangasana" />
+          <h5>Bhujangasana · Spine</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-right">
+        <div
+          class="workout-card"
+          data-bs-toggle="modal"
+          data-bs-target="#modal5"
+        >
+          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Adho Mukha Svanasana" />
+          <h5>Adho Mukha Svanasana · Stretch</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-left">
+        <div
+          class="workout-card"
+          data-bs-toggle="modal"
+          data-bs-target="#modal6"
+        >
+          <img src="./Images/vajarasan'.webp" alt="Vajrasana" />
+          <h5>Vajrasana · Digestion</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-right">
+        <div
+          class="workout-card"
+          data-bs-toggle="modal"
+          data-bs-target="#modal7"
+        >
+          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Padmasana" />
+          <h5>Padmasana · Meditation</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-left">
+        <div
+          class="workout-card"
+          data-bs-toggle="modal"
+          data-bs-target="#modal8"
+        >
+          <img src="./Images/dhanursana.webp" alt="Dhanurasana" />
+          <h5>Dhanurasana · Back Strength</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-right">
+        <div
+          class="workout-card"
+          data-bs-toggle="modal"
+          data-bs-target="#modal9"
+        >
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Shavasana" />
+          <h5>Shavasana · Relaxation</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-left">
+        <div
+          class="workout-card"
+          data-bs-toggle="modal"
+          data-bs-target="#modal10"
+        >
+          <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Anulom Vilom" />
+          <h5>Anulom Vilom · Breathing</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Yoga Diet Section -->
+  <!-- <section class="diet-section">
+    <div class="container">
+      <h2>🫖 Yoga-Friendly Diet</h2>
+      <p>Balance your body and soul with a clean, sattvic diet — light, fresh, and nourishing foods to align your energy and focus.</p>
+
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <div class="p-3 shadow-sm rounded" style="background: #fff; color: #000;">
+            <h5 class="text-danger fw-bold">🍚 Morning</h5>
+            <p>Warm water with lemon, fruits, or herbal tea.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="p-3 shadow-sm rounded" style="background: #fff; color: #000;">
+            <h5 class="text-danger fw-bold">🥦 Afternoon</h5>
+            <p>Steamed vegetables, rice, dal, and salad.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="p-3 shadow-sm rounded" style="background: #fff; color: #000;">
+            <h5 class="text-danger fw-bold">🍵 Evening</h5>
+            <p>Green tea, light soup, or fruit smoothie.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- 10 MODALS -->
+  <div id="modalContainer">
+    <!-- Each modal has unique id, video, and text -->
+    <!-- Surya Namaskar -->
+    <div class="modal fade" id="modal1" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Surya Namaskar · Warmup</h4>
+            <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <iframe src="https://www.youtube.com/embed/v7AYKMP6rOE" allowfullscreen class="w-100 rounded" style="height: 300px;"></iframe>
+            <p class="mt-3">Full-body warmup that enhances flexibility and energizes the body.</p>
+            <div class="text-center">
+              <button class="btn btn-done" data-bs-dismiss="modal">DONE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tadasana -->
+    <div class="modal fade" id="modal2" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Tadasana · Posture</h4>
+            <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <iframe src="https://www.youtube.com/embed/oBu-pQG6sTY" allowfullscreen class="w-100 rounded" style="height: 300px;"></iframe>
+            <p class="mt-3">Improves posture and steadiness. A foundation pose for many asanas.</p>
+            <div class="text-center">
+              <button class="btn btn-done" data-bs-dismiss="modal">DONE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trikonasana -->
+    <div class="modal fade" id="modal3" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Trikonasana · Balance</h4>
+            <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <iframe src="https://www.youtube.com/embed/NMnmn8Z39Cc" allowfullscreen class="w-100 rounded" style="height: 300px;"></iframe>
+            <p class="mt-3">Opens hips and shoulders, stretches hamstrings, and improves balance.</p>
+            <div class="text-center">
+              <button class="btn btn-done" data-bs-dismiss="modal">DONE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bhujangasana -->
+    <div class="modal fade" id="modal4" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Bhujangasana · Spine</h4>
+            <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <iframe src="https://www.youtube.com/embed/luTSRGXPEMs" allowfullscreen class="w-100 rounded" style="height: 300px;"></iframe>
+            <p class="mt-3">Strengthens the spine, stretches the chest, shoulders, and abdomen.</p>
+            <div class="text-center">
+              <button class="btn btn-done" data-bs-dismiss="modal">DONE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Adho Mukha Svanasana -->
+    <div class="modal fade" id="modal5" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Adho Mukha Svanasana · Stretch</h4>
+            <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <iframe src="https://www.youtube.com/embed/lZL7oh2lOgE" allowfullscreen class="w-100 rounded" style="height: 300px;"></iframe>
+            <p class="mt-3">Relieves tension, strengthens arms and legs, and stretches the back.</p>
+            <div class="text-center">
+              <button class="btn btn-done" data-bs-dismiss="modal">DONE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vajrasana -->
+    <div class="modal fade" id="modal6" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Vajrasana · Digestion</h4>
+            <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <iframe src="https://www.youtube.com/embed/xDsDQEU5LTM" allowfullscreen class="w-100 rounded" style="height: 300px;"></iframe>
+            <p class="mt-3">Improves digestion and posture, and promotes calmness of mind.</p>
+            <div class="text-center">
+              <button class="btn btn-done" data-bs-dismiss="modal">DONE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Padmasana -->
+    <div class="modal fade" id="modal7" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Padmasana · Meditation</h4>
+            <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <iframe src="https://www.youtube.com/embed/w_j4lnfRC38" allowfullscreen class="w-100 rounded" style="height: 300px;"></iframe>
+            <p class="mt-3">Enhances concentration, helps with meditation, and improves posture.</p>
+            <div class="text-center">
+              <button class="btn btn-done" data-bs-dismiss="modal">DONE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dhanurasana -->
+    <div class="modal fade" id="modal8" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Dhanurasana · Back Strength</h4>
+            <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <iframe src="https://www.youtube.com/embed/02c6EtA2eGc" allowfullscreen class="w-100 rounded" style="height: 300px;"></iframe>
+            <p class="mt-3">Strengthens the back and opens the chest, shoulders, and thighs.</p>
+            <div class="text-center">
+              <button class="btn btn-done" data-bs-dismiss="modal">DONE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Shavasana -->
+    <div class="modal fade" id="modal9" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Shavasana · Relaxation</h4>
+            <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <iframe src="https://www.youtube.com/embed/TJNfblsl5i4" allowfullscreen class="w-100 rounded" style="height: 300px;"></iframe>
+            <p class="mt-3">Relaxes the body completely and restores energy after practice.</p>
+            <div class="text-center">
+              <button class="btn btn-done" data-bs-dismiss="modal">DONE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Anulom Vilom -->
+    <div class="modal fade" id="modal10" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Anulom Vilom · Breathing</h4>
+            <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <iframe src="https://www.youtube.com/embed/Nhw92icsQ1A" allowfullscreen class="w-100 rounded" style="height: 300px;"></iframe>
+            <p class="mt-3">Balances breathing, improves focus, and relieves stress naturally.</p>
+            <div class="text-center">
+              <button class="btn btn-done" data-bs-dismiss="modal">DONE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="diet-section py-5" data-aos="fade-up">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4" style="color:#8B0000;">Importance of Diet</h2>
+      <p class="mx-auto" style="max-width: 800px; font-size: 1.1rem; color: #333;">
+        Building muscle and gaining healthy weight isn’t just about lifting heavier — it’s about fueling your body right.
+        A calorie surplus rich in proteins, healthy fats, and complex carbohydrates helps your muscles recover and grow stronger.
+        Balanced nutrition ensures your workouts actually transform into visible gains, not just sweat and effort.
+      </p>
+
+      <div class="mt-4">
+        <button class="btn btn-lg" 
+                style="background: linear-gradient(to right, #000000, #8B0000); color: white; border-radius: 30px; font-weight: 600;"
+                onclick="window.location.href='./diet.html'">
+          Explore Weight Gain Diet Plan →
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-center py-3" style="background: #8b0000; color: white">
+    <p class="m-0">© 2025 BeFit | All Rights Reserved</p>
+  </footer>
+
+ <style>
+    .diet-section {
+  background: linear-gradient(180deg, #fff, #fbeaea);
+  border-top: 3px solid #8B0000;
+  border-radius: 15px 15px 0 0;
+}
+
+ </style>
+
+
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
+
+</body>
+</html>

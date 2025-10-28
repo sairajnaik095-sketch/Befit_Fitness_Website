@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | BeFit Fitness Club</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="../Bootstrap/bootstrap.min.css">
+  <script src="../Bootstrap/bootstrap.bundle.min.js"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- Custom Style -->
+  <style>
+    body {
+      background: linear-gradient(135deg, #000000, #8B0000);
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    .login-section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 50px 20px;
+      background: radial-gradient(circle at 10% 20%, rgba(255, 215, 0, 0.1), rgba(0,0,0,0.9));
+    }
+
+    .login-card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      border-radius: 25px;
+      padding: 50px 40px;
+      box-shadow: 0 0 40px rgba(255, 215, 0, 0.1);
+      width: 100%;
+      max-width: 420px;
+      transition: all 0.4s ease;
+    }
+
+    .login-card:hover {
+      box-shadow: 0 0 60px rgba(255, 215, 0, 0.25);
+      transform: translateY(-5px);
+    }
+
+    .login-card h2 {
+      text-align: center;
+      font-weight: 700;
+      margin-bottom: 30px;
+      text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+      color: #FFD700;
+    }
+
+    .form-control {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 10px;
+      color: #fff;
+      padding: 12px 15px;
+    }
+
+    .form-control:focus {
+      background: rgba(255,255,255,0.15);
+      border-color: #FFD700;
+      box-shadow: 0 0 10px rgba(255,215,0,0.2);
+    }
+
+    .btn-login {
+      background: linear-gradient(to right, #FFD700, #ff9c00);
+      border: none;
+      color: #000;
+      font-weight: 700;
+      width: 100%;
+      padding: 12px;
+      border-radius: 30px;
+      margin-top: 20px;
+      box-shadow: 0 0 20px rgba(255,215,0,0.3);
+      transition: all 0.3s ease;
+    }
+
+    .btn-login:hover {
+      background: linear-gradient(to right, #ffb400, #FFD700);
+      box-shadow: 0 0 40px rgba(255,215,0,0.6);
+      transform: translateY(-3px);
+    }
+
+    .login-footer {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0.95rem;
+    }
+
+    .login-footer a {
+      color: #FFD700;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .login-footer a:hover {
+      text-decoration: underline;
+    }
+
+    .social-login {
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    .social-login i {
+      font-size: 22px;
+      margin: 0 10px;
+      cursor: pointer;
+      color: #FFD700;
+      transition: 0.3s;
+    }
+
+    .social-login i:hover {
+      transform: scale(1.2);
+      color: #fff;
+    }
+
+    /* Glow animation */
+    @keyframes glowPulse {
+      0%, 100% { box-shadow: 0 0 20px rgba(255,215,0,0.3); }
+      50% { box-shadow: 0 0 40px rgba(255,215,0,0.6); }
+    }
+
+    .login-card {
+      animation: glowPulse 3s infinite;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ===== LOGIN SECTION ===== -->
+  <section class="login-section">
+    <div class="login-card" data-aos="zoom-in">
+      <h2>Welcome Back 💪</h2>
+      <form>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email Address</label>
+          <input type="email" id="email" class="form-control" placeholder="Enter your email">
+        </div>
+
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" id="password" class="form-control" placeholder="Enter your password">
+        </div>
+
+        <button type="submit" class="btn-login">LOGIN</button>
+      </form>
+
+      <div class="login-footer">
+        <p>Don't have an account? <a href="./signup.html">Sign Up</a></p>
+        <p><a href="#">Forgot Password?</a></p>
+      </div>
+
+      <div class="social-login">
+        <p>Or continue with</p>
+        <i class="fab fa-google"></i>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-github"></i>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    AOS.init({
+      duration: 1200,
+      once: true
+    });
+  </script>
+  <style>
+    
+  </style>
+</body>
+</html>
+

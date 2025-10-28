@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BeFit | Weight Gain Workout</title>
+
+  <link rel="stylesheet" href="../Bootstrap/bootstrap.min.css">
+  <script src="../Bootstrap/bootstrap.bundel.min.js"></script>
+  <link rel="stylesheet" href="./Style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <style>
+    body {
+      background: #f5f5f5;
+      font-family: 'Poppins', sans-serif;
+    }
+    .workout-title {
+      text-align: center;
+      font-weight: 700;
+      font-size: 2.5rem;
+      margin-top: 40px;
+      background: linear-gradient(to right, #000000, #8B0000);
+      color: transparent;
+      -webkit-background-clip: text;
+      text-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+    }
+    .workout-card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+    .workout-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 25px rgba(139,0,0,0.3);
+    }
+    .workout-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .workout-card h5 {
+      padding: 15px;
+      font-weight: 600;
+      text-align: center;
+      color: #8B0000;
+    }
+    .modal-content {
+      border-radius: 15px;
+      overflow: hidden;
+    }
+    .modal-header {
+      background: linear-gradient(135deg, #000000, #8B0000);
+      color: #fff;
+      border: none;
+    }
+    .btn-done {
+      background: #8B0000;
+      color: white;
+      font-weight: 600;
+      border-radius: 30px;
+    }
+  </style>
+  
+</head>
+
+<body>
+  <!-- Navbar -->
+  <section class="Navbar_Header sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(to right, #000000, #8B0000);">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="./Home.html">BeFit</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="./Home.html">HOME</a></li>
+            <li class="nav-item"><a class="nav-link active" href="#">WEIGHT GAIN WORKOUT</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Title -->
+  <h1 class="workout-title" data-aos="fade-down">WEIGHT GAIN WORKOUT</h1>
+
+  <div class="container py-5">
+    <div class="row g-4 justify-content-center">
+
+      <!-- 1 -->
+      <div class="col-md-4" data-aos="fade-right">
+        <div class="workout-card" data-bs-toggle="modal" data-bs-target="#squatModal">
+          <img src="./Images/sqau.webp" alt="Squat">
+          <h5>Squat · Barbell</h5>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="col-md-4" data-aos="fade-left">
+        <div class="workout-card" data-bs-toggle="modal" data-bs-target="#benchModal">
+          <img src="./Images/benchp.webp" alt="Bench Press">
+          <h5>Bench Press · Barbell</h5>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="col-md-4" data-aos="fade-right">
+        <div class="workout-card" data-bs-toggle="modal" data-bs-target="#deadliftModal">
+          <img src="./Images/dead.webp" alt="Deadlift">
+          <h5>Deadlift · Barbell</h5>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="col-md-4" data-aos="fade-left">
+        <div class="workout-card" data-bs-toggle="modal" data-bs-target="#pullupModal">
+          <img src="./Images/pullup.webp" alt="Pull-Up">
+          <h5>Pull-Up · Bodyweight</h5>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="col-md-4" data-aos="fade-right">
+        <div class="workout-card" data-bs-toggle="modal" data-bs-target="#rowModal">
+          <img src="./Images/bent.webp" alt="Bent-Over Row">
+          <h5>Bent-Over Row · Barbell</h5>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="col-md-4" data-aos="fade-left">
+        <div class="workout-card" data-bs-toggle="modal" data-bs-target="#pressModal">
+          <img src="./Images/shoulder.webp" alt="Shoulder Press">
+          <h5>Shoulder Press · Dumbbell</h5>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="col-md-4" data-aos="fade-right">
+        <div class="workout-card" data-bs-toggle="modal" data-bs-target="#lungeModal">
+          <img src="./Images/lunges.webp" alt="Lunges">
+          <h5>Lunges · Dumbbell</h5>
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="col-md-4" data-aos="fade-left">
+        <div class="workout-card" data-bs-toggle="modal" data-bs-target="#curlModal">
+          <img src="./Images/biseccurl.webp" alt="Bicep Curl">
+          <h5>Bicep Curl · Dumbbell</h5>
+        </div>
+      </div>
+
+      <!-- 9 -->
+      <div class="col-md-4" data-aos="fade-right">
+        <div class="workout-card" data-bs-toggle="modal" data-bs-target="#dipModal">
+          <img src="./Images/dips.webp" alt="Dips">
+          <h5>Dips · Bodyweight</h5>
+        </div>
+      </div>
+
+      <!-- 10 -->
+      <div class="col-md-4" data-aos="fade-left">
+        <div class="workout-card" data-bs-toggle="modal" data-bs-target="#plankModal">
+          <img src="./Images/plank.webp" alt="Plank Hold">
+          <h5>Plank Hold · Core</h5>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========== MODALS ========== -->
+
+  <!-- Squat -->
+  <div class="modal fade" id="squatModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header"><h4 class="modal-title">Squat · Barbell</h4>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <video src="./vedeo/sqautsgain.mp4" controls autoplay loop muted class="w-100 rounded"></video>
+          <h5>Focus Area</h5><p>Legs, Glutes, Core</p>
+          <h5>Execution</h5><p>Lower hips until thighs are parallel, then push through heels to stand tall.</p>
+          <div class="text-center"><button class="btn btn-done" data-bs-dismiss="modal">DONE</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bench Press -->
+  <div class="modal fade" id="benchModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header"><h4 class="modal-title">Bench Press · Barbell</h4>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <video src="./vedeo/bench_press_weightgain.mp4" controls autoplay loop muted class="w-100 rounded"></video>
+          <h5>Focus Area</h5><p>Chest, Shoulders, Triceps</p>
+          <h5>Execution</h5><p>Lower the bar to chest level, press upward with controlled power.</p>
+          <div class="text-center"><button class="btn btn-done" data-bs-dismiss="modal">DONE</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Deadlift -->
+  <div class="modal fade" id="deadliftModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header"><h4 class="modal-title">Deadlift · Barbell</h4>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <video src="./vedeo/dead_lift_weightgain.mp4" controls autoplay loop muted class="w-100 rounded"></video>
+          <h5>Focus Area</h5><p>Back, Glutes, Hamstrings</p>
+          <h5>Execution</h5><p>Keep spine neutral, lift bar smoothly using your legs and hips.</p>
+          <div class="text-center"><button class="btn btn-done" data-bs-dismiss="modal">DONE</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="deadliftModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header"><h4 class="modal-title">Deadlift · Barbell</h4>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <video src="./vedeo/deadlift.mp4" controls autoplay loop muted class="w-100 rounded"></video>
+          <h5>Focus Area</h5><p>Back, Glutes, Hamstrings</p>
+          <h5>Execution</h5><p>Keep spine neutral, lift bar smoothly using your legs and hips.</p>
+          <div class="text-center"><button class="btn btn-done" data-bs-dismiss="modal">DONE</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Pull-Up -->
+  <div class="modal fade" id="pullupModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header"><h4 class="modal-title">Pull-Up · Bodyweight</h4>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <video src="./vedeo/pullup.mp4" controls autoplay loop muted class="w-100 rounded"></video>
+          <h5>Focus Area</h5><p>Back, Biceps, Core</p>
+          <h5>Execution</h5><p>Grip the bar shoulder-width, pull up until your chin clears it, then lower slowly.</p>
+          <div class="text-center"><button class="btn btn-done" data-bs-dismiss="modal">DONE</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bent-Over Row -->
+  <div class="modal fade" id="rowModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header"><h4 class="modal-title">Bent-Over Row · Barbell</h4>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <video src="./vedeo/bentover.mp4" controls autoplay loop muted class="w-100 rounded"></video>
+          <h5>Focus Area</h5><p>Back, Lats, Rear Delts</p>
+          <h5>Execution</h5><p>Maintain a flat back, pull the bar towards your abdomen, and lower under control.</p>
+          <div class="text-center"><button class="btn btn-done" data-bs-dismiss="modal">DONE</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Shoulder Press -->
+  <div class="modal fade" id="pressModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header"><h4 class="modal-title">Shoulder Press · Dumbbell</h4>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <video src="./vedeo/shoulderpress.mp4" controls autoplay loop muted class="w-100 rounded"></video>
+          <h5>Focus Area</h5><p>Shoulders, Triceps, Core</p>
+          <h5>Execution</h5><p>Press dumbbells overhead, pause, and lower with control to shoulder height.</p>
+          <div class="text-center"><button class="btn btn-done" data-bs-dismiss="modal">DONE</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lunges -->
+  <div class="modal fade" id="lungeModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header"><h4 class="modal-title">Lunges · Dumbbell</h4>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <video src="./vedeo/lunges.mp4" controls autoplay loop muted class="w-100 rounded"></video>
+          <h5>Focus Area</h5><p>Legs, Glutes, Balance</p>
+          <h5>Execution</h5><p>Step forward, drop the back knee near the ground, and push through your front heel to return.</p>
+          <div class="text-center"><button class="btn btn-done" data-bs-dismiss="modal">DONE</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bicep Curl -->
+  <div class="modal fade" id="curlModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header"><h4 class="modal-title">Bicep Curl · Dumbbell</h4>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <video src="./vedeo/bisepcurl.mp4" controls autoplay loop muted class="w-100 rounded"></video>
+          <h5>Focus Area</h5><p>Biceps, Forearms</p>
+          <h5>Execution</h5><p>Keep elbows close to torso, curl dumbbells up, and slowly lower back down.</p>
+          <div class="text-center"><button class="btn btn-done" data-bs-dismiss="modal">DONE</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dips -->
+  <div class="modal fade" id="dipModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header"><h4 class="modal-title">Dips · Bodyweight</h4>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <video src="./vedeo/dips.mp4" controls autoplay loop muted class="w-100 rounded"></video>
+          <h5>Focus Area</h5><p>Chest, Triceps, Shoulders</p>
+          <h5>Execution</h5><p>Lower body by bending elbows until arms form 90°, then press up powerfully.</p>
+          <div class="text-center"><button class="btn btn-done" data-bs-dismiss="modal">DONE</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Plank Hold -->
+  <div class="modal fade" id="plankModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header"><h4 class="modal-title">Plank Hold · Core</h4>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <video src="./vedeo/plank_weightgain.mp4" controls autoplay loop muted class="w-100 rounded"></video>
+          <h5>Focus Area</h5><p>Core, Abs, Shoulders</p>
+          <h5>Execution</h5><p>Keep your body straight, engage core muscles, and hold position steadily.</p>
+          <div class="text-center"><button class="btn btn-done" data-bs-dismiss="modal">DONE</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================== IMPORTANCE OF DIET SECTION ================== -->
+  <section class="diet-section py-5" data-aos="fade-up">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4" style="color:#8B0000;">Importance of Diet in Weight Gain</h2>
+      <p class="mx-auto" style="max-width: 800px; font-size: 1.1rem; color: #333;">
+        Building muscle and gaining healthy weight isn’t just about lifting heavier — it’s about fueling your body right.
+        A calorie surplus rich in proteins, healthy fats, and complex carbohydrates helps your muscles recover and grow stronger.
+        Balanced nutrition ensures your workouts actually transform into visible gains, not just sweat and effort.
+      </p>
+
+      <div class="mt-4">
+        <button class="btn btn-lg" 
+                style="background: linear-gradient(to right, #000000, #8B0000); color: white; border-radius: 30px; font-weight: 600;"
+                onclick="window.location.href='./diet.html'">
+          Explore Weight Gain Diet Plan →
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-center py-3" style="background: #8b0000; color: white">
+    <p class="m-0">© 2025 BeFit | All Rights Reserved</p>
+  </footer>
+
+ <style>
+    .diet-section {
+  background: linear-gradient(180deg, #fff, #fbeaea);
+  border-top: 3px solid #8B0000;
+  border-radius: 15px 15px 0 0;
+}
+
+ </style>
+
+ 
+  <script>
+    AOS.init({ duration: 1000 });
+  </script>
+
+</body>
+</html>

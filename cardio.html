@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BeFit | Cardio Workout</title>
+
+  <link rel="stylesheet" href="../Bootstrap/bootstrap.min.css" />
+  <script src="../Bootstrap/bootstrap.bundel.min.js"></script>
+  <link rel="stylesheet" href="./Style.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <style>
+    body {
+      background: #f5f5f5;
+      font-family: "Poppins", sans-serif;
+    }
+
+    .workout-title {
+      text-align: center;
+      font-weight: 700;
+      font-size: 2.5rem;
+      margin-top: 40px;
+      background: linear-gradient(to right, #8b0000, #000000);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+    }
+
+    .workout-card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .workout-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 25px rgba(139, 0, 0, 0.3);
+    }
+
+    .workout-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .workout-card h5 {
+      padding: 15px;
+      font-weight: 600;
+      text-align: center;
+      color: #8b0000;
+    }
+
+    .modal-content {
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+    .modal-header {
+      background: linear-gradient(135deg, #8b0000, #000000);
+      color: #fff;
+      border: none;
+    }
+
+    .btn-done {
+      background: #8b0000;
+      color: white;
+      font-weight: 600;
+      border-radius: 30px;
+    }
+
+    .diet-section {
+      background: linear-gradient(180deg, #fff, #fdeaea);
+      border-top: 3px solid #8b0000;
+      border-radius: 15px 15px 0 0;
+    }
+
+    .btn-readmore {
+      background: #8b0000;
+      color: white;
+      font-weight: 600;
+      border-radius: 30px;
+      margin-top: 10px;
+    }
+
+    .video-description {
+      margin-top: 10px;
+      font-size: 1rem;
+      text-align: center;
+      color: #333;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <section class="Navbar_Header sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(to right, #8b0000, #000000)">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="./Home.html">BeFit</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="./Home.html">HOME</a></li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">CARDIO WORKOUT</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Title -->
+  <h1 class="workout-title" data-aos="fade-down">CARDIO WORKOUT</h1>
+
+  <div class="container py-5">
+    <div class="row g-4 justify-content-center">
+      <!-- 10 Cards -->
+      <div class="col-md-4" data-aos="fade-right">
+        <div class="workout-card" data-bs-toggle="modal" data-bs-target="#modal1">
+          <img src="https://imgs.search.brave.com/HNytvUntid_ZQlMw5b9eejHfklKpfAZr4D_EKij18Uk/rs:fit:860:0:0:0/g:ce/aHR0cDovL2NydW5j/aC5jb20vd3AtY29u/dGVudC91cGxvYWRz/LzIwMjQvMDgvQ1Iw/MTFBR19BdWd1c3Qt/dy1vLTgtMTktYXJ0/aWNsZS1pbWFnZXNf/SnVtcGluZy1Sb3Bl/X2FydGljbGUtMl84/LjI4LjI0LmpwZw" alt="Jump Rope">
+          <h5>Jump Rope</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-left">
+        <div class="workout-card" data-bs-toggle="modal" data-bs-target="#modal2">
+          <img src="https://imgs.search.brave.com/Ow6-TcFUIec2vuefXitmYdqb3OfPqIcnwwoXSiE8pDU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jb250/ZW50cy5tZWRpYWRl/Y2F0aGxvbi5jb20v/czk0MjI5NS9rJDk1/MGQyMTgyMDFjNDRi/ZDE4ZGY2ODAxOWNk/NWU0YzQxLzE5MjB4/MC8zMDAwcHQyMTYz/LzYwMDB4Y3IzMzMz/L0xlcy1idXJwZWVz/LS1sZXhlcmNpY2Ut/c3Rhci1kZXMtY2ly/Y3VpdHMtY2FyZGlv/LXRyYWluaW5nLmpw/Zz9mb3JtYXQ9YXV0/bw" alt="Burpees">
+          <h5>Burpees</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-right">
+        <div class="workout-card" data-bs-toggle="modal" data-bs-target="#modal3">
+          <img src="https://imgs.search.brave.com/DrLDAW4UnmP2yB6xpP82utRvVdqR4EKj0E9LSPZ-MJI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9iYXJi/ZW5kLmNvbS93cC1j/b250ZW50L3VwbG9h/ZHMvMjAyNC8wNy9o/aWdoLWtuZWVzLTE5/OTIzMzAzNDQuanBn" alt="High Knees">
+          <h5>High Knees</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-left">
+        <div class="workout-card" data-bs-toggle="modal" data-bs-target="#modal4">
+          <img src="https://imgs.search.brave.com/N6uoxBwYJ824d7AyS-7jyoOsM5tvzAlM5x2wiAEePuE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/c29sZXRyZWFkbWls/bHMuY29tL2Nkbi9z/aG9wL2FydGljbGVz/L0FfbWFuX2RvaW5n/X21vdW50YWluX2Ns/aW1iZXJzXzM1NmFi/OWM3LTFlMTktNGZl/MS04MTgyLTlhYjFj/ZDI4ZTUxYi5wbmc_/dj0xNzUxOTIxOTgz/JndpZHRoPTE1MDA" alt="Mountain Climbers">
+          <h5>Mountain Climbers</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-right">
+        <div class="workout-card" data-bs-toggle="modal" data-bs-target="#modal5">
+          <img src="https://imgs.search.brave.com/4KSCYo4m2mmREPSwvcdFTKDuGPrfMXxg83dNwf-_BEc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/c29sZXRyZWFkbWls/bHMuY29tL2Nkbi9z/aG9wL2FydGljbGVz/L0F0aGxldGljX3dv/bWFuX2luX3dvcmtv/dXRfZ2Vhcl9kb2lu/Z19qdW1waW5nX2ph/Y2tzX2luX2FuX2Vt/cHR5X2luZHVzdHJp/YWxfYnVpbGRpbmcu/cG5nP3Y9MTc1NTA5/ODE2MiZ3aWR0aD0x/NTAw" alt="Jumping Jacks">
+          <h5>Jumping Jacks</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-left">
+        <div class="workout-card" data-bs-toggle="modal" data-bs-target="#modal6">
+          <img src="https://imgs.search.brave.com/htjxBYp1A13f7ES05eiUoXB8gdlZwTn8PbGNxI0Oi2s/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9iYXJi/ZW5kLmNvbS93cC1j/b250ZW50L3VwbG9h/ZHMvMjAyMy8wMi9C/cmFyYmVuZC5jb20t/QXJ0aWNsZS1JbWFn/ZS1BLXBlcnNvbi1q/b2dnaW5nLW9uLWEt/dHJlYWRtaWxsLmpw/Zw" alt="Sprint in Place">
+          <h5>Sprint in Place</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-right">
+        <div class="workout-card" data-bs-toggle="modal" data-bs-target="#modal7">
+          <img src="https://imgs.search.brave.com/jpDpjnZHxX8NDwiiHzi1yb4FCj33LRQdHGZ2VlZlqpg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pMC53/cC5jb20vd3d3Lm11/c2NsZWFuZGZpdG5l/c3MuY29tL3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDE5LzExL0Zp/dC1NYW4tZG9pbmct/YS1sZWdzLXdvcmtv/dXQtd2l0aC1ib3gt/anVtcHMtZXhlcmNp/c2UuanBnP3F1YWxp/dHk9ODYmc3RyaXA9/YWxs" alt="Box Jumps">
+          <h5>Box Jumps</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-left">
+        <div class="workout-card" data-bs-toggle="modal" data-bs-target="#modal8">
+          <img src="https://imgs.search.brave.com/tjqCXiFrNz4GeKeDksRuUXpsiZ0Nuhbj4AwgIfZ4KYQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zcG9y/dGNvYWNoaW5nLmNv/Lm56L3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDIyLzA5L0J1dHQt/S2lja3MtRXhlcmNp/c2UuanBn" alt="Butt Kicks">
+          <h5>Butt Kicks</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-right">
+        <div class="workout-card" data-bs-toggle="modal" data-bs-target="#modal9">
+          <img src="https://imgs.search.brave.com/tMkrjLOwl1F91xgBkBMNaara3aGMX_UT_oVkpv40DCA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9nZXRo/ZWFsdGh5dS5jb20v/d3AtY29udGVudC91/cGxvYWRzLzIwMTQv/MDgvTGF0ZXJhbC1T/aHVmZmxpbmdfRXhl/cmNpc2UuanBn" alt="Side Shuffle">
+          <h5>Side Shuffle</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-left">
+        <div class="workout-card" data-bs-toggle="modal" data-bs-target="#modal10">
+          <img src="https://imgs.search.brave.com/mT55DKhIipJNwtmrIdaEYcm5CyOJtDG-W7_WwcGSg-Q/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9nZXRo/ZWFsdGh5dS5jb20v/d3AtY29udGVudC91/cGxvYWRzLzIwMTQv/MDgvU2thdGVyc19F/eGVyY2lzZS5qcGc" alt="Skater Jumps">
+          <h5>Skater Jumps</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Diet Section -->
+  <section class="diet-section">
+    <div class="container">
+      <div class="text-center"><h2>🥗 Cardio-Friendly Diet</h2>
+      <p>Fuel your cardio with proper nutrition — energy-rich, light, and hydrating meals.</p>
+</div>
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <div class="p-3 shadow-sm rounded" style="background: #fff; color: #000;">
+            <h5 class="text-danger fw-bold">🍌 Pre-Workout</h5>
+            <p>Banana, peanut butter, or a light smoothie.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-3 shadow-sm rounded" style="background: #fff; color: #000;">
+            <h5 class="text-danger fw-bold">🥗 Post-Workout</h5>
+            <p>Protein shake, oatmeal, or brown rice with vegetables.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-3 shadow-sm rounded" style="background: #fff; color: #000;">
+            <h5 class="text-danger fw-bold">💧 Hydration</h5>
+            <p>Water and electrolytes to replenish fluids.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-3">
+        <a href="./diet.html" class="btn btn-readmore">Read More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 Modals with local videos and descriptions -->
+  <div id="modalContainer">
+    <!-- Modal Template -->
+    <div class="modal fade" id="modal1" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Jump Rope</h4>
+            <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body text-center">
+            <video src="https://lyftaweb.s3.us-east-2.amazonaws.com/GymvisualMP4/26121201.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4GVRAGMP72ZCKFHN%2F20251013%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20251013T142819Z&X-Amz-Expires=300&X-Amz-Signature=03718ffb8d151ce87f22e89b566c6c95784b005582164a1772c54c57cf2a0971&X-Amz-SignedHeaders=host" controls class="w-100 rounded" style="height: 300px;"></video>
+            <p class="video-description">Jump rope increases heart rate, burns calories fast, and improves coordination and endurance.</p>
+            <button class="btn btn-done" data-bs-dismiss="modal">DONE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal2" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Burpees</h4>
+            <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body text-center">
+            <video src="https://lyftaweb.s3.us-east-2.amazonaws.com/GymvisualMP4/11601201.mp4" controls class="w-100 rounded" style="height: 300px;"></video>
+            <p class="video-description">Burpees boost full-body strength, cardiovascular endurance, and explosive power.</p>
+            <button class="btn btn-done" data-bs-dismiss="modal">DONE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal3" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">High Knees</h4>
+            <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body text-center">
+            <video src="https://lyftaweb.s3.us-east-2.amazonaws.com/GymvisualMP4/30911201.mp4" controls class="w-100 rounded" style="height: 300px;"></video>
+            <p class="video-description">High knees increase heart rate, strengthen legs, and improve running form and endurance.</p>
+            <button class="btn btn-done" data-bs-dismiss="modal">DONE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal4" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Mountain Climbers</h4>
+            <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body text-center">
+            <video src="./vedeo/mountain.mp4" controls class="w-100 rounded" style="height: 300px;"></video>
+            <p class="video-description">Mountain climbers enhance core strength, agility, and cardiovascular fitness.</p>
+            <button class="btn btn-done" data-bs-dismiss="modal">DONE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal5" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Jumping Jacks</h4>
+            <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body text-center">
+            <video src="./vedeo/jamping1.mp4" controls class="w-100 rounded" style="height: 300px;"></video>
+            <p class="video-description">Jumping jacks improve heart health, coordination, and burn calories efficiently.</p>
+            <button class="btn btn-done" data-bs-dismiss="modal">DONE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal6" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Sprint in Place</h4>
+            <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body text-center">
+            <video src="https://lyftaweb.s3.us-east-2.amazonaws.com/GymvisualMP4/52161201.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4GVRAGMP72ZCKFHN%2F20251013%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20251013T143044Z&X-Amz-Expires=300&X-Amz-Signature=fc9395dab512c50f30673a33dd203db82762796e0cb33e01315ce69fe2eb0508&X-Amz-SignedHeaders=host" controls class="w-100 rounded" style="height: 300px;"></video>
+            <p class="video-description">Sprinting in place boosts stamina, improves cardiovascular capacity, and burns fat.</p>
+            <button class="btn btn-done" data-bs-dismiss="modal">DONE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal7" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Box Jumps</h4>
+            <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body text-center">
+            <video src="https://lyftaweb.s3.us-east-2.amazonaws.com/GymvisualMP4/38921201.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4GVRAGMP72ZCKFHN%2F20251013%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20251013T143126Z&X-Amz-Expires=300&X-Amz-Signature=7ff7d6c33c14837450510b72b04c6a222359ec8ee815e4e566c32f44c7ad3a76&X-Amz-SignedHeaders=host" controls class="w-100 rounded" style="height: 300px;"></video>
+            <p class="video-description">Box jumps build explosive leg power, improve agility, and elevate heart rate.</p>
+            <button class="btn btn-done" data-bs-dismiss="modal">DONE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal8" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Butt Kicks</h4>
+            <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body text-center">
+            <video src="https://lyftaweb.s3.us-east-2.amazonaws.com/GymvisualMP4/30371201.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4GVRAGMP72ZCKFHN%2F20251013%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20251013T143202Z&X-Amz-Expires=300&X-Amz-Signature=a93290c0d9f1fc92799190d7ed3772f005e497437c930ab3a9e00c3cd07b7f2f&X-Amz-SignedHeaders=host" controls class="w-100 rounded" style="height: 300px;"></video>
+            <p class="video-description">Butt kicks improve hamstring flexibility and warm up the legs for intense cardio.</p>
+            <button class="btn btn-done" data-bs-dismiss="modal">DONE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal9" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Side Shuffle</h4>
+            <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body text-center">
+            <video src="https://lyftaweb.s3.us-east-2.amazonaws.com/GymvisualMP4/75701201.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4GVRAGMP72ZCKFHN%2F20251013%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20251013T143318Z&X-Amz-Expires=300&X-Amz-Signature=7cecaaaf2fd6b75d0333eb25405a8a2aed16c709dd008c74d6c5d26de5a91fd9&X-Amz-SignedHeaders=host" controls class="w-100 rounded" style="height: 300px;"></video>
+            <p class="video-description">Side shuffles strengthen lateral movement, agility, and core stability.</p>
+            <button class="btn btn-done" data-bs-dismiss="modal">DONE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal10" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Skater Jumps</h4>
+            <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body text-center">
+            <video src="https://lyftaweb.s3.us-east-2.amazonaws.com/GymvisualMP4/33611201.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4GVRAGMP72ZCKFHN%2F20251013%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20251013T143438Z&X-Amz-Expires=300&X-Amz-Signature=b51e1a03437565083e4e973f85c0a063b78a46de6e782921f3f33735b783648a&X-Amz-SignedHeaders=host" controls class="w-100 rounded" style="height: 300px;"></video>
+            <p class="video-description">Skater jumps improve balance, explosive leg strength, and cardiovascular endurance.</p>
+            <button class="btn btn-done" data-bs-dismiss="modal">DONE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+<br>
+  <footer>
+    <div class="text-center py-3">© 2025 BeFit | All Rights Reserved</div>
+  </footer>
+
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
+</body>
+</html>
